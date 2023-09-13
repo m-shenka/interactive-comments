@@ -39,6 +39,7 @@ img {
     border-radius: 12px;
     margin-bottom: 18px; 
     padding: 14px;
+    position: relative;
 }
 
 .comment__header {
@@ -70,22 +71,11 @@ img {
     line-height: 24px;
 }
 
-.gradeAndButton {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-}
 
 .comment__gradeButton {
     border: none;
 }
 
-.gradeAndButton > button {
-    border: none;
-    background: none;
-    
-}
 
 .comment__gradeButton > button {
     border: none;
@@ -126,10 +116,15 @@ img {
 .gradeAndButton__reply {
     display: flex;
     flex-direction: row;
+    border: none;
+    background: none;
     color:  hsl(238, 40%, 52%);
     font-weight: bold;
     align-items: center;
     font-size: 16px;
+    position: absolute;
+    right: 3%;
+    bottom: 11%;
 }
 
 /* .reply__img {
@@ -137,7 +132,7 @@ img {
 }  */
 
 .gradeAndButton__reply > img {
-    margin-right: 3px;
+    margin-right: 6px;
     width: 14px;
 }
 
@@ -166,30 +161,40 @@ img {
 .gradeAndButton__delete {
     display: flex;
     flex-direction: row;
+    border: none;
+    background: none;
     font-weight: bold;
     color: hsl(358, 79%, 66%);
     font-size: 16px;
     align-items: center;
+    position: absolute;
+    right: 23%;
+    bottom: 11%;
 
 }
 
 .gradeAndButton__delete > img {
-    margin-right: 3px;
+    margin-right: 6px;
     width: 14px;
 }
 
 .gradeAndButton__edit {
     display: flex;
     flex-direction: row;
+    border: none;
+    background: none;
     font-weight: bold;
     color: hsl(238, 40%, 52%);
     font-size: 16px;
     align-items: center;
+    position: absolute;
+    right: 4%;
+    bottom: 11%;
 
 }
 
 .gradeAndButton__edit > img {
-    margin-right: 3px;
+    margin-right: 6px;
     width: 14px;
 
 }
@@ -198,7 +203,7 @@ img {
     width: 100%;
     background-color: white;
     border-radius: 12px;
-    padding: 14px;
+    padding: 19px;
 }
 
 .leaveAComment__userField {
@@ -213,15 +218,7 @@ img {
     margin-bottom: 18px;
 }
 
-.avatarAndButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-   
-}
-
-.leaveAComment__img {
+.leaveAComment__img > img {
     width: 31px;
 
 }
@@ -234,6 +231,7 @@ img {
     padding: 16px;
     border-radius: 10px;
     font-weight: bold;
+   
     
 }
 
@@ -241,28 +239,61 @@ button:hover {
     cursor: pointer;
  }
 
- @media only screen and (min-width: 900px) {
+ .container__leaveAComment {
+    display: grid;
+    grid-template-columns: 10fr 3fr ;
+    grid-template-rows: 0.1fr;
+    grid-template-areas: "userField userField"
+                         "avatar button" ;             ;
+}
+
+.leaveAComment__img {
+    grid-area: avatar;
+}
+
+
+
+.leaveAComment__userField {
+    grid-area: userField;
+
+}
+
+
+
+.leaveAComment__send {
+    grid-area: button;
+
+}
+
+
+ @media only screen and (min-width: 700px) {
     .container__comment {
         display: grid;
+        grid-template-columns: 1fr 8fr 1fr;
+        grid-template-rows: 0.2fr 0.1fr;
+        grid-template-areas: "button header reply"
+                                "button text text";
 
-        grid-template-areas: "button"  "header" "reply" 
-                                        "text";
+        margin-bottom: 22px;
                                
     }
 
     .comment__gradeButton {
         grid-area: button;
-        
+        align-self: start;
     }
 
     .comment__header {
         grid-area: header;
+       
        
 
     }
 
     .gradeAndButton__reply {
         grid-area: reply;
+        right: 17%;
+        bottom: 14%;
         
     }
 
@@ -272,16 +303,74 @@ button:hover {
 
     .comment__grade {
         width: 43px;
-        padding: 50px 0px;
+        padding: 41px 0px;
         
     }
 
-    .comment__header {
-        width: 30%;
-        justify-content: start;
-        align-items: center;
+    .gradeButton__less {
+        top: 80%;
+        left: 10px;
+    }
+    
+    .gradeButton__more {
+        top: 11%;
+        left: 10px;
+    
     }
 
+    .comment__branch {
+        margin-left: 40px;
+        padding-left: 43px;
+    }
+
+    .gradeAndButton__delete {
+        grid-area: reply;
+        right: 168%;
+        bottom: 19%;
+    
+    }
+
+    .gradeAndButton__edit {
+        grid-area: reply;
+        right: 38%;
+        bottom: 20%;
+    
+    }
+
+    .container__leaveAComment {
+        display: grid;
+        grid-template-columns: 1fr 7fr 2fr;
+        grid-template-rows: 0.1fr;
+        grid-template-areas: "avatar userField button";
+        padding: 25px;
+    }
+
+
+
+    .leaveAComment__userField {
+        grid-area: userField;
+        justify-self: center;
+
+    }
+
+  
+
+    .leaveAComment__send {
+        grid-area: button;
+        height: 50px;
+        justify-self: end;
+
+    }
+
+    .leaveAComment__img {
+        grid-area: avatar;
+        justify-self: center;
+    }
+
+   
+    
+
+    
     
 
 
