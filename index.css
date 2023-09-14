@@ -17,23 +17,19 @@ img {
     background-color:hsl(228, 33%, 97%);
     width: 100%;
     margin: 0 auto;
-    align-items: center;
     padding: 9px;
     font-family: 'Rubik', sans-serif;
 }
 
 .comment__branch {
-    align-items: center;
     border-left: solid;
     border-color: #9b96962e;
     padding-left: 10px;
     border-width: 2px;
-      
 }
 
 
 .container__comment {
-    align-items: center;
     width: 100%;
     background-color: white;
     border-radius: 12px;
@@ -46,9 +42,7 @@ img {
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: start;
     align-items: center;
-    
 }
 
 .comment__img {
@@ -71,11 +65,9 @@ img {
     line-height: 24px;
 }
 
-
 .comment__gradeButton {
     border: none;
 }
-
 
 .comment__gradeButton > button {
     border: none;
@@ -94,10 +86,8 @@ img {
     font-size: 16px;
 }
 
-
 .comment__gradeButton {
     position: relative;
-
 }
 
 .gradeButton__less {
@@ -110,12 +100,10 @@ img {
     position: absolute;
     top: 34.5%;
     left: 10px;
-
 }
 
 .gradeAndButton__reply {
     display: flex;
-    flex-direction: row;
     border: none;
     background: none;
     color:  hsl(238, 40%, 52%);
@@ -127,14 +115,15 @@ img {
     bottom: 11%;
 }
 
-/* .reply__img {
-    margin-right: 25px;
-}  */
-
-.gradeAndButton__reply > img {
+.reply__img {
     margin-right: 6px;
     width: 14px;
-}
+} 
+
+/* .gradeAndButton__reply > img {
+    margin-right: 6px;
+    width: 14px;
+} */
 
 .text__responseNickname {
     font-weight: bold;
@@ -151,7 +140,6 @@ img {
     font-size: 12px;
     padding: 3px 9px;
     margin-right: 16px;
-    
 }
 
 .comment__username--juliusomo {
@@ -160,7 +148,6 @@ img {
 
 .gradeAndButton__delete {
     display: flex;
-    flex-direction: row;
     border: none;
     background: none;
     font-weight: bold;
@@ -180,7 +167,6 @@ img {
 
 .gradeAndButton__edit {
     display: flex;
-    flex-direction: row;
     border: none;
     background: none;
     font-weight: bold;
@@ -220,7 +206,6 @@ img {
 
 .leaveAComment__img > img {
     width: 31px;
-
 }
 
 .leaveAComment__send {
@@ -231,8 +216,6 @@ img {
     padding: 16px;
     border-radius: 10px;
     font-weight: bold;
-   
-    
 }
 
 button:hover {
@@ -244,27 +227,20 @@ button:hover {
     grid-template-columns: 10fr 3fr ;
     grid-template-rows: 0.1fr;
     grid-template-areas: "userField userField"
-                         "avatar button" ;             ;
+                         "avatar button" ;
 }
 
 .leaveAComment__img {
     grid-area: avatar;
 }
 
-
-
 .leaveAComment__userField {
     grid-area: userField;
-
 }
-
-
 
 .leaveAComment__send {
     grid-area: button;
-
 }
-
 
  @media only screen and (min-width: 700px) {
     .container__comment {
@@ -273,9 +249,7 @@ button:hover {
         grid-template-rows: 0.2fr 0.1fr;
         grid-template-areas: "button header reply"
                                 "button text text";
-
         margin-bottom: 22px;
-                               
     }
 
     .comment__gradeButton {
@@ -285,16 +259,12 @@ button:hover {
 
     .comment__header {
         grid-area: header;
-       
-       
-
     }
 
     .gradeAndButton__reply {
         grid-area: reply;
         right: 17%;
         bottom: 14%;
-        
     }
 
     .comment__text {
@@ -304,7 +274,6 @@ button:hover {
     .comment__grade {
         width: 43px;
         padding: 41px 0px;
-        
     }
 
     .gradeButton__less {
@@ -315,7 +284,6 @@ button:hover {
     .gradeButton__more {
         top: 11%;
         left: 10px;
-    
     }
 
     .comment__branch {
@@ -327,14 +295,12 @@ button:hover {
         grid-area: reply;
         right: 168%;
         bottom: 19%;
-    
     }
 
     .gradeAndButton__edit {
         grid-area: reply;
         right: 38%;
         bottom: 20%;
-    
     }
 
     .container__leaveAComment {
@@ -345,37 +311,19 @@ button:hover {
         padding: 25px;
     }
 
-
-
     .leaveAComment__userField {
         grid-area: userField;
         justify-self: center;
-
     }
-
-  
 
     .leaveAComment__send {
         grid-area: button;
         height: 50px;
         justify-self: end;
-
     }
 
     .leaveAComment__img {
         grid-area: avatar;
         justify-self: center;
     }
-
-   
-    
-
-    
-    
-
-
-
-
-
-
  }
