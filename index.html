@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="container">
-    <div class="container__comment container__comment--amyrobson">
+    <div class="comment">
       <div class="comment__header">
         <a class="comment__img" href="#"><img src="./images/avatars/image-amyrobson.png" alt="the avatar of user"/></a>
         <span class="comment__username">amyrobson</span>
@@ -23,12 +23,12 @@
       <p class="comment__text">Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.</p> 
       <div class="comment__gradeButton"> 
         <button class="gradeButton__more"><img src="./images/icon-plus.svg" alt="make graduation mark more"/></button>
-        <input type="grade of work" name="number" placeholder="12" class="comment__grade"/>
+        <p class="comment__grade">12</p>
         <button class="gradeButton__less"><img src="./images/icon-minus.svg" alt="make graduation mark less" /></button>
       </div>
-      <button class="gradeAndButton__reply"> <img src="./images/icon-reply.svg" alt="reply logo for button"/>Reply</button>
+      <button class="comment__gradeAndButton comment__gradeAndButton--reply"> <img src="./images/icon-reply.svg" alt="reply logo for button"/>Reply</button>
     </div>
-    <div class="container__comment container__comment--maxblagun">
+    <div class="comment">
       <div class="comment__header">
         <a class="comment__img" href="#"><img src="./images/avatars/image-maxblagun.png" alt="the avatar of user"/></a>
         <span class="comment__username">maxblagun</span>
@@ -38,48 +38,48 @@
       Thanks!</p>  
       <div class="comment__gradeButton"> 
         <button class="gradeButton__more"><img src="./images/icon-plus.svg" alt="make graduation mark more"/></button>
-        <input type="grade of work" name="number" placeholder="5" class="comment__grade"/>
+        <p class="comment__grade">5</p>
         <button class="gradeButton__less"><img src="./images/icon-minus.svg" alt="make graduation mark less" /></button>
       </div>
-      <button class="gradeAndButton__reply"> <img src="./images/icon-reply.svg" class="reply__img" alt="reply logo for button"/>Reply</button>
+      <button class="comment__gradeAndButton comment__gradeAndButton--reply"> <img src="./images/icon-reply.svg" class="reply__img" alt="reply logo for button"/>Reply</button>
     </div>
     <div class="comment__branch">
-      <div class="container__comment container__comment--ramsesmiron">
+      <div class="comment">
         <div class="comment__header">
           <a class="comment__img" href="#"><img src="./images/avatars/image-ramsesmiron.png" alt="the avatar of user"/></a>
           <span class="comment__username">ramsesmiron</span>
           <span class="comment__period">1 week ago</span>
         </div>
-        <p class="comment__text"> <a class="text__responseNickname"> @maxblagun</a>  If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
+        <p class="comment__text"> <a class="comment__responseNickname"> @maxblagun</a>  If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.</p>
         <div class="comment__gradeButton"> 
           <button class="gradeButton__more"><img src="./images/icon-plus.svg" alt="make graduation mark more"/></button>
-          <input type="grade of work" name="number" placeholder="4" class="comment__grade"/>
+          <p class="comment__grade">4</p>
           <button class="gradeButton__less"><img src="./images/icon-minus.svg" alt="make graduation mark less" /></button>
         </div>
-        <button class="gradeAndButton__reply"> <img src="./images/icon-reply.svg" class="reply__img" alt="reply logo for button"/>Reply</button>
+        <button class="comment__gradeAndButton comment__gradeAndButton--reply"> <img src="./images/icon-reply.svg" class="reply__img" alt="reply logo for button"/>Reply</button>
       </div>  
-      <div class="container__comment container__comment--juliusomo">
+      <div class="comment">
         <div class="comment__header">
           <a class="comment__img" href="#"><img src="./images/avatars/image-juliusomo.png" alt="the avatar of user"/></a>
-          <span class="comment__username comment__username--juliusomo">juliusomo</span>
-          <button class="header__buttonYou">you</button>
+          <span class="comment__username comment__username--you">juliusomo</span>
+          <span class="comment__youTag">you</span>
           <span class="comment__period">2 days ago</span>
         </div>
-        <p class="comment__text"><a class="text__responseNickname">@ramsesmiron</a>  I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework.
+        <p class="comment__text"><a class="comment__responseNickname">@ramsesmiron</a>  I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework.
           But the fundamentals are what stay constant.</p>
         <div class="comment__gradeButton"> 
           <button class="gradeButton__more"><img src="./images/icon-plus.svg" alt="make graduation mark more"/></button>
-          <input type="grade of work" name="number" placeholder="2" class="comment__grade"/>
+          <p class="comment__grade">2</p>
           <button class="gradeButton__less"><img src="./images/icon-minus.svg" alt="make graduation mark less" /></button>
         </div>
-        <button class="gradeAndButton__delete"> <img src="./images/icon-delete.svg" alt="delete logo for button"/>Delete</button>
-        <button class="gradeAndButton__edit"> <img src="./images/icon-edit.svg" alt="edit logo for button"/>Edit</button>
+        <button class="comment__gradeAndButton comment__gradeAndButton--delete"> <img src="./images/icon-delete.svg" alt="delete logo for button"/>Delete</button>
+        <button class="comment__gradeAndButton comment__gradeAndButton--edit"> <img src="./images/icon-edit.svg" alt="edit logo for button"/>Edit</button>
       </div>
     </div>
     <div class="container__leaveAComment">
-      <input type="user leave their comment" name="comment" placeholder="Add a comment..." class="leaveAComment__userField"/>
-      <a class="leaveAComment__img" href="#"><img src="./images/avatars/image-juliusomo.png" alt="the avatar of user"/></a>
-      <button class="leaveAComment__send">Send</button> 
+      <textarea id="leave_a_comment_areas" name="comment" class="container__userField">Add a comment...</textarea>
+      <a class="container__yourImg" href="#"><img src="./images/avatars/image-juliusomo.png" alt="the avatar of user"/></a>
+      <button class="container__send">Send</button> 
     </div>
   </div>
 </body>

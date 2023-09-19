@@ -1,7 +1,6 @@
 body { 
     margin: 0px;
-    padding: 0px;
-   
+    padding: 0px;  
 }
 
 div {
@@ -29,7 +28,7 @@ img {
 }
 
 
-.container__comment {
+.comment {
     width: 100%;
     background-color: white;
     border-radius: 12px;
@@ -84,6 +83,7 @@ img {
     text-align: center;
     font-weight: bold;
     font-size: 16px;
+    opacity: 0.6;
 }
 
 .comment__gradeButton {
@@ -102,7 +102,7 @@ img {
     left: 10px;
 }
 
-.gradeAndButton__reply {
+.comment__gradeAndButton {
     display: flex;
     border: none;
     background: none;
@@ -112,26 +112,26 @@ img {
     font-size: 16px;
     position: absolute;
     right: 3%;
-    bottom: 11%;
+    bottom: 13%;
 }
 
-.reply__img {
+.comment__gradeAndButton--delete {
+    color: hsl(358, 79%, 66%);
+    right: 23%;
+}
+
+.comment__gradeAndButton > img {
     margin-right: 6px;
     width: 14px;
-} 
+}
 
-/* .gradeAndButton__reply > img {
-    margin-right: 6px;
-    width: 14px;
-} */
-
-.text__responseNickname {
+.comment__responseNickname {
     font-weight: bold;
     color: hsl(238, 40%, 52%);
     
 }
 
-.header__buttonYou {
+.comment__youTag {
     border: none;
     background-color:hsl(238, 40%, 52%) ;
     color: white;
@@ -142,49 +142,6 @@ img {
     margin-right: 16px;
 }
 
-.comment__username--juliusomo {
-    margin-right: 7px;
-}
-
-.gradeAndButton__delete {
-    display: flex;
-    border: none;
-    background: none;
-    font-weight: bold;
-    color: hsl(358, 79%, 66%);
-    font-size: 16px;
-    align-items: center;
-    position: absolute;
-    right: 23%;
-    bottom: 11%;
-
-}
-
-.gradeAndButton__delete > img {
-    margin-right: 6px;
-    width: 14px;
-}
-
-.gradeAndButton__edit {
-    display: flex;
-    border: none;
-    background: none;
-    font-weight: bold;
-    color: hsl(238, 40%, 52%);
-    font-size: 16px;
-    align-items: center;
-    position: absolute;
-    right: 4%;
-    bottom: 11%;
-
-}
-
-.gradeAndButton__edit > img {
-    margin-right: 6px;
-    width: 14px;
-
-}
-
 .container__leaveAComment {
     width: 100%;
     background-color: white;
@@ -192,23 +149,27 @@ img {
     padding: 19px;
 }
 
-.leaveAComment__userField {
+.container__userField {
     box-sizing: border-box;
     width: 100%;
-    padding: 32px 145px 63px 33px;
+    height: 95px; 
+    padding: 14px;
     border-color: #9b96962e;
     border-radius: 10px;
     border-width: 1px;
     text-align: start;
-    font-size: 18px;
+    font-size: 16px;
     margin-bottom: 18px;
+    font-family: 'Rubik', sans-serif;
+    color: hsl(223deg 9.1% 78.57%);
+    resize: none;
 }
 
-.leaveAComment__img > img {
+.container__yourImg > img {
     width: 31px;
 }
 
-.leaveAComment__send {
+.container__send {
     width: 104px;
     border: none;
     background-color: hsl(238, 40%, 52%) ;
@@ -216,6 +177,8 @@ img {
     padding: 16px;
     border-radius: 10px;
     font-weight: bold;
+    justify-self: end;
+    text-transform: uppercase;
 }
 
 button:hover {
@@ -230,20 +193,20 @@ button:hover {
                          "avatar button" ;
 }
 
-.leaveAComment__img {
+.container__yourImg {
     grid-area: avatar;
 }
 
-.leaveAComment__userField {
+.container__userField {
     grid-area: userField;
 }
 
-.leaveAComment__send {
+.container__send {
     grid-area: button;
 }
 
  @media only screen and (min-width: 700px) {
-    .container__comment {
+    .comment {
         display: grid;
         grid-template-columns: 1fr 8fr 1fr;
         grid-template-rows: 0.2fr 0.1fr;
@@ -261,7 +224,7 @@ button:hover {
         grid-area: header;
     }
 
-    .gradeAndButton__reply {
+    .comment__gradeAndButton--reply {
         grid-area: reply;
         right: 17%;
         bottom: 14%;
@@ -277,12 +240,12 @@ button:hover {
     }
 
     .gradeButton__less {
-        top: 80%;
+        top: 70%;
         left: 10px;
     }
     
     .gradeButton__more {
-        top: 11%;
+        top: 22%;
         left: 10px;
     }
 
@@ -291,13 +254,13 @@ button:hover {
         padding-left: 43px;
     }
 
-    .gradeAndButton__delete {
+    .comment__gradeAndButton--delete {
         grid-area: reply;
         right: 168%;
         bottom: 19%;
     }
 
-    .gradeAndButton__edit {
+    .comment__gradeAndButton--edit {
         grid-area: reply;
         right: 38%;
         bottom: 20%;
@@ -311,18 +274,18 @@ button:hover {
         padding: 25px;
     }
 
-    .leaveAComment__userField {
+    .container__userField {
         grid-area: userField;
         justify-self: center;
     }
 
-    .leaveAComment__send {
+    .container__send {
         grid-area: button;
         height: 50px;
         justify-self: end;
     }
 
-    .leaveAComment__img {
+    .container__yourImg {
         grid-area: avatar;
         justify-self: center;
     }
